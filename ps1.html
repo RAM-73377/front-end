@@ -11,7 +11,7 @@
       height: 100vh;
     }
     .left-pane {
-      background-color: blue;
+      background-color: #0d6efd;
       color: white;
       display: flex;
       flex-direction: column;
@@ -41,6 +41,17 @@
         margin-right: auto;
         width: 30%;
     }
+  
+  @media (max-width: 768px) {
+    .left-pane {
+      display: none;
+    }
+    .right-pane {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+  }
   </style>
 </head>
 <body>
