@@ -9,9 +9,11 @@
     .container-custom {
       display: flex;
       height: 100vh;
-      padding: 0; 
+      padding: 0;
     }
     .left-pane {
+      height: 100%;
+      width: 100;
       background-color: #0d6efd;
       color: white;
       display: flex;
@@ -19,7 +21,7 @@
       justify-content: center;
       align-items: center;
       flex: 1;
-      padding: 30px;
+      padding: 20px;
     }
     
     .right-pane {
@@ -62,23 +64,6 @@
       }
     }
 
-    @media (max-width: 768px) and (orientation: landscape) {
-      .container-custom {
-        flex-direction: row;
-        padding: 10px; /* Add padding for landscape mode */
-      }
-      .left-pane {
-        display: none; /* Hide left pane in landscape mode */
-      }
-      .right-pane {
-        flex: 1 1 auto;
-        padding: 20px; /* Add more padding for landscape mode */
-      }
-      .form-container {
-        max-width: 100%;
-        padding: 20px; /* Adjust padding for landscape mode */
-      }
-    }
   </style>
 </head>
 <body>
