@@ -9,6 +9,7 @@
     .container-custom {
       display: flex;
       height: 100vh;
+      padding: 0; 
     }
     .left-pane {
       background-color: #0d6efd;
@@ -37,36 +38,41 @@
       margin-bottom: 20px;
     }
     .right-pane img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 30%;
-        
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30%;
     }
   
-  @media (max-width: 768px) {
-    .left-pane {
-      display: none;
+    @media (max-width: 768px) {
+      .container-custom {
+        flex-direction: column;
+        padding: 10px; 
+      }
+      .left-pane {
+        display: none;
+      }
+      .right-pane {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 10px;
+      }
+      .form-container {
+        padding: 10px; 
+      }
     }
-    .right-pane {
-      flex: 0 0 100%;
-      max-width: 100%;
-      padding: 5px;
-    }
-    
-  }
   </style>
 </head>
 <body>
   <div class="container-custom">
-    <div class="left-pane">
+    <div class="left-pane d-none d-md-flex">
       <h2>Unlock your <b>recruitment potential!</b></h2>
-      <img src="Component 1.png">
+      <img src="Component 1.png" alt="Component Image">
       <p>Sign up today and streamline your hiring process effortlessly.</p>
     </div>
     <div class="right-pane">
       <div class="form-container">
-        <img src="ratos-logo-site-2-1.png">
+        <img src="ratos-logo-site-2-1.png" alt="Ratos Logo">
         <h2>Get Started Now</h2>
         <form>
           <div class="row">
