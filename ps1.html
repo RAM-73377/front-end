@@ -64,47 +64,59 @@
       max-width: 100%;
     }
   }
-
+  .form-check-input{
+    background-color: grey;
+  }
+  .btn-secondary{
+    background-color: aliceblue;
+    right: -170px;
+    position: relative;
+  }
+  .getstart{
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
   
   </style>
 </head>
 <body>
-  <div class="container-custom">
-    <div class="left-pane">
+  <main class="container-custom">
+    <section class="left-pane">
       <h2>Unlock your <b>recruitment potential!</b></h2>
-      <img src="Component 1.png" alt="Component Image">
-      <p>Sign up today and streamline your hiring process effortlessly.</p>
-    </div>
-    <div class="right-pane">
+      <img src="Component 1.png" alt="Component Image" title="Fill the details appropriately in the right to create a new account">
+      <h3>Sign up today and streamline your hiring</h3>
+      <h3>process effortlessly.</h3>
+    </section>
+    <section class="right-pane">
       <div class="form-container">
-        <img src="ratos-logo-site-2-1.png" alt="Ratos Logo">
-        <h2>Get Started Now</h2>
+        <img src="ratos-logo-site-2-1.png" alt="Vybog Logo" title="Vybog's Logo" class="ratos">
+        <h2 class="getstart">Get Started Now</h2>
         <form>
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="firstName" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+              <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required pattern="[A-Za-z]{2,}" autofocus spellcheck="true" aria-label="Enter your First Name">
             </div>
             <div class="col-md-6 mb-3">
               <label for="lastName" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required>
+              <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required pattern="[A-Za-z]{2,}" spellcheck="true" aria-label="Enter your Last Name">
             </div>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" required title="Please enter a valid email address." aria-label="Enter your Email">
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password" required pattern="(?=.[0-9])(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*]).{10,}" title="Password must be at least 10 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character." autocomplete="new-password" aria-label="Enter your Password">
           </div>
           <div class="mb-3">
             <label for="contactNumber" class="form-label">Contact Number</label>
-            <input type="text" class="form-control" id="contactNumber" placeholder="Enter Contact Number" required>
+            <input type="text" class="form-control" id="contactNumber" placeholder="Enter Contact Number" required pattern="\+[0-9]{1,3} [0-9]{10}" aria-label="Enter your Contact Number">
           </div>
           <div class="mb-3">
             <label for="domain" class="form-label">Domain / Industry</label>
-            <input type="text" class="form-control" id="domain" placeholder="Enter Domain / Industry" required>
+            <input type="text" class="form-control" id="domain" placeholder="Enter Domain / Industry" required aria-label="Domain">
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="termsCheck" required>
@@ -116,8 +128,8 @@
           </div>
         </form>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzB6Yh5Jz8eDrteZBJ9Bkkcxh4u8DWpG6kKT47URJOhp" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12W0oxJQvAqjAnFf/JB1KdEj3lU1i5rG5jskfB78CPCFvg9G" crossorigin="anonymous"></script>
